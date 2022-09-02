@@ -1,0 +1,130 @@
+[2022-09-02 18:37:03,763] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 1_test_configuration.test_configuration manual__2022-09-02T18:36:56.312203+00:00 [queued]>
+[2022-09-02 18:37:03,879] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 1_test_configuration.test_configuration manual__2022-09-02T18:36:56.312203+00:00 [queued]>
+[2022-09-02 18:37:03,884] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 18:37:03,886] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-09-02 18:37:03,887] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 18:37:04,059] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): test_configuration> on 2022-09-02 18:36:56.312203+00:00
+[2022-09-02 18:37:04,077] {standard_task_runner.py:52} INFO - Started process 526 to run task
+[2022-09-02 18:37:04,188] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', '1_test_configuration', 'test_configuration', 'manual__2022-09-02T18:36:56.312203+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/init.py', '--cfg-path', '/tmp/tmp_g173mj9', '--error-file', '/tmp/tmph8inejwj']
+[2022-09-02 18:37:04,196] {standard_task_runner.py:80} INFO - Job 4: Subtask test_configuration
+[2022-09-02 18:37:05,117] {task_command.py:371} INFO - Running <TaskInstance: 1_test_configuration.test_configuration manual__2022-09-02T18:36:56.312203+00:00 [running]> on host 647443ba232d
+[2022-09-02 18:37:07,326] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=1_test_configuration
+AIRFLOW_CTX_TASK_ID=test_configuration
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-02T18:36:56.312203+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-02T18:36:56.312203+00:00
+[2022-09-02 18:37:07,382] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-02 18:37:07,474] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /dbt && dbt -h']
+[2022-09-02 18:37:07,802] {subprocess.py:85} INFO - Output:
+[2022-09-02 18:37:28,376] {subprocess.py:92} INFO - usage: dbt [-h] [--version] [-r RECORD_TIMING_INFO] [-d]
+[2022-09-02 18:37:28,395] {subprocess.py:92} INFO -            [--log-format {text,json,default}] [--no-write-json]
+[2022-09-02 18:37:28,397] {subprocess.py:92} INFO -            [--use-colors | --no-use-colors] [--printer-width PRINTER_WIDTH]
+[2022-09-02 18:37:28,401] {subprocess.py:92} INFO -            [--warn-error] [--no-version-check]
+[2022-09-02 18:37:28,411] {subprocess.py:92} INFO -            [--partial-parse | --no-partial-parse] [--use-experimental-parser]
+[2022-09-02 18:37:28,414] {subprocess.py:92} INFO -            [--no-static-parser] [--profiles-dir PROFILES_DIR]
+[2022-09-02 18:37:28,420] {subprocess.py:92} INFO -            [--no-anonymous-usage-stats] [-x]
+[2022-09-02 18:37:28,428] {subprocess.py:92} INFO -            [--event-buffer-size EVENT_BUFFER_SIZE] [-q] [--no-print]
+[2022-09-02 18:37:28,434] {subprocess.py:92} INFO -            [--cache-selected-only | --no-cache-selected-only]
+[2022-09-02 18:37:28,440] {subprocess.py:92} INFO -            {docs,source,init,clean,debug,deps,list,ls,build,snapshot,run,compile,parse,test,seed,run-operation}
+[2022-09-02 18:37:28,462] {subprocess.py:92} INFO -            ...
+[2022-09-02 18:37:28,463] {subprocess.py:92} INFO - 
+[2022-09-02 18:37:28,467] {subprocess.py:92} INFO - An ELT tool for managing your SQL transformations and data models. For more
+[2022-09-02 18:37:28,470] {subprocess.py:92} INFO - documentation on these commands, visit: docs.getdbt.com
+[2022-09-02 18:37:28,471] {subprocess.py:92} INFO - 
+[2022-09-02 18:37:28,474] {subprocess.py:92} INFO - optional arguments:
+[2022-09-02 18:37:28,478] {subprocess.py:92} INFO -   -h, --help            show this help message and exit
+[2022-09-02 18:37:28,480] {subprocess.py:92} INFO -   --version             Show version information
+[2022-09-02 18:37:28,484] {subprocess.py:92} INFO -   -r RECORD_TIMING_INFO, --record-timing-info RECORD_TIMING_INFO
+[2022-09-02 18:37:28,488] {subprocess.py:92} INFO -                         When this option is passed, dbt will output low-level
+[2022-09-02 18:37:28,492] {subprocess.py:92} INFO -                         timing stats to the specified file. Example:
+[2022-09-02 18:37:28,500] {subprocess.py:92} INFO -                         `--record-timing-info output.profile`
+[2022-09-02 18:37:28,506] {subprocess.py:92} INFO -   -d, --debug           Display debug logging during dbt execution. Useful for
+[2022-09-02 18:37:28,510] {subprocess.py:92} INFO -                         debugging and making bug reports.
+[2022-09-02 18:37:28,513] {subprocess.py:92} INFO -   --log-format {text,json,default}
+[2022-09-02 18:37:28,516] {subprocess.py:92} INFO -                         Specify the log format, overriding the command's
+[2022-09-02 18:37:28,520] {subprocess.py:92} INFO -                         default.
+[2022-09-02 18:37:28,526] {subprocess.py:92} INFO -   --no-write-json       If set, skip writing the manifest and run_results.json
+[2022-09-02 18:37:28,530] {subprocess.py:92} INFO -                         files to disk
+[2022-09-02 18:37:28,534] {subprocess.py:92} INFO -   --use-colors          Colorize the output DBT prints to the terminal. Output
+[2022-09-02 18:37:28,536] {subprocess.py:92} INFO -                         is colorized by default and may also be set in a
+[2022-09-02 18:37:28,539] {subprocess.py:92} INFO -                         profile or at the command line. Mutually exclusive
+[2022-09-02 18:37:28,543] {subprocess.py:92} INFO -                         with --no-use-colors
+[2022-09-02 18:37:28,546] {subprocess.py:92} INFO -   --no-use-colors       Do not colorize the output DBT prints to the terminal.
+[2022-09-02 18:37:28,549] {subprocess.py:92} INFO -                         Output is colorized by default and may also be set in
+[2022-09-02 18:37:28,552] {subprocess.py:92} INFO -                         a profile or at the command line. Mutually exclusive
+[2022-09-02 18:37:28,556] {subprocess.py:92} INFO -                         with --use-colors
+[2022-09-02 18:37:28,560] {subprocess.py:92} INFO -   --printer-width PRINTER_WIDTH
+[2022-09-02 18:37:28,564] {subprocess.py:92} INFO -                         Sets the width of terminal output
+[2022-09-02 18:37:28,566] {subprocess.py:92} INFO -   --warn-error          If dbt would normally warn, instead raise an
+[2022-09-02 18:37:28,568] {subprocess.py:92} INFO -                         exception. Examples include --models that selects
+[2022-09-02 18:37:28,572] {subprocess.py:92} INFO -                         nothing, deprecations, configurations with no
+[2022-09-02 18:37:28,576] {subprocess.py:92} INFO -                         associated models, invalid test configurations, and
+[2022-09-02 18:37:28,579] {subprocess.py:92} INFO -                         missing sources/refs in tests.
+[2022-09-02 18:37:28,582] {subprocess.py:92} INFO -   --no-version-check    If set, skip ensuring dbt's version matches the one
+[2022-09-02 18:37:28,603] {subprocess.py:92} INFO -                         specified in the dbt_project.yml file ('require-dbt-
+[2022-09-02 18:37:28,622] {subprocess.py:92} INFO -                         version')
+[2022-09-02 18:37:28,641] {subprocess.py:92} INFO -   --partial-parse       Allow for partial parsing by looking for and writing
+[2022-09-02 18:37:28,681] {subprocess.py:92} INFO -                         to a pickle file in the target directory. This
+[2022-09-02 18:37:28,686] {subprocess.py:92} INFO -                         overrides the user configuration file.
+[2022-09-02 18:37:28,693] {subprocess.py:92} INFO -   --no-partial-parse    Disallow partial parsing. This overrides the user
+[2022-09-02 18:37:28,696] {subprocess.py:92} INFO -                         configuration file.
+[2022-09-02 18:37:28,701] {subprocess.py:92} INFO -   --use-experimental-parser
+[2022-09-02 18:37:28,704] {subprocess.py:92} INFO -                         Enables experimental parsing features.
+[2022-09-02 18:37:28,710] {subprocess.py:92} INFO -   --no-static-parser    Disables the static parser.
+[2022-09-02 18:37:28,716] {subprocess.py:92} INFO -   --profiles-dir PROFILES_DIR
+[2022-09-02 18:37:28,719] {subprocess.py:92} INFO -                         Which directory to look in for the profiles.yml file.
+[2022-09-02 18:37:28,723] {subprocess.py:92} INFO -                         Default = /home/***/.dbt
+[2022-09-02 18:37:28,727] {subprocess.py:92} INFO -   --no-anonymous-usage-stats
+[2022-09-02 18:37:28,730] {subprocess.py:92} INFO -                         Do not send anonymous usage stat to dbt Labs
+[2022-09-02 18:37:28,734] {subprocess.py:92} INFO -   -x, --fail-fast       Stop execution upon a first failure.
+[2022-09-02 18:37:28,738] {subprocess.py:92} INFO -   --event-buffer-size EVENT_BUFFER_SIZE
+[2022-09-02 18:37:28,742] {subprocess.py:92} INFO -                         Sets the max number of events to buffer in
+[2022-09-02 18:37:28,746] {subprocess.py:92} INFO -                         EVENT_HISTORY
+[2022-09-02 18:37:28,751] {subprocess.py:92} INFO -   -q, --quiet           Suppress all non-error logging to stdout. Does not
+[2022-09-02 18:37:28,753] {subprocess.py:92} INFO -                         affect {{ print() }} macro calls.
+[2022-09-02 18:37:28,756] {subprocess.py:92} INFO -   --no-print            Suppress all {{ print() }} macro calls.
+[2022-09-02 18:37:28,761] {subprocess.py:92} INFO -   --cache-selected-only
+[2022-09-02 18:37:28,765] {subprocess.py:92} INFO -                         Pre cache database objects relevant to selected
+[2022-09-02 18:37:28,768] {subprocess.py:92} INFO -                         resource only.
+[2022-09-02 18:37:28,769] {subprocess.py:92} INFO -   --no-cache-selected-only
+[2022-09-02 18:37:28,770] {subprocess.py:92} INFO -                         Pre cache all database objects related to the project.
+[2022-09-02 18:37:28,775] {subprocess.py:92} INFO - 
+[2022-09-02 18:37:28,780] {subprocess.py:92} INFO - Available sub-commands:
+[2022-09-02 18:37:28,782] {subprocess.py:92} INFO -   {docs,source,init,clean,debug,deps,list,ls,build,snapshot,run,compile,parse,test,seed,run-operation}
+[2022-09-02 18:37:28,785] {subprocess.py:92} INFO -     docs                Generate or serve the documentation website for your
+[2022-09-02 18:37:28,786] {subprocess.py:92} INFO -                         project.
+[2022-09-02 18:37:28,789] {subprocess.py:92} INFO -     source              Manage your project's sources
+[2022-09-02 18:37:28,793] {subprocess.py:92} INFO -     init                Initialize a new DBT project.
+[2022-09-02 18:37:28,795] {subprocess.py:92} INFO -     clean               Delete all folders in the clean-targets list (usually
+[2022-09-02 18:37:28,797] {subprocess.py:92} INFO -                         the dbt_packages and target directories.)
+[2022-09-02 18:37:28,801] {subprocess.py:92} INFO -     debug               Show some helpful information about dbt for debugging.
+[2022-09-02 18:37:28,803] {subprocess.py:92} INFO -                         Not to be confused with the --debug option which
+[2022-09-02 18:37:28,806] {subprocess.py:92} INFO -                         increases verbosity.
+[2022-09-02 18:37:28,820] {subprocess.py:92} INFO -     deps                Pull the most recent version of the dependencies
+[2022-09-02 18:37:28,823] {subprocess.py:92} INFO -                         listed in packages.yml
+[2022-09-02 18:37:28,825] {subprocess.py:92} INFO -     list (ls)           List the resources in your project
+[2022-09-02 18:37:28,828] {subprocess.py:92} INFO -     build               Run all Seeds, Models, Snapshots, and tests in DAG
+[2022-09-02 18:37:28,830] {subprocess.py:92} INFO -                         order
+[2022-09-02 18:37:28,834] {subprocess.py:92} INFO -     snapshot            Execute snapshots defined in your project
+[2022-09-02 18:37:28,836] {subprocess.py:92} INFO -     run                 Compile SQL and execute against the current target
+[2022-09-02 18:37:28,839] {subprocess.py:92} INFO -                         database.
+[2022-09-02 18:37:28,842] {subprocess.py:92} INFO -     compile             Generates executable SQL from source, model, test, and
+[2022-09-02 18:37:28,849] {subprocess.py:92} INFO -                         analysis files. Compiled SQL files are written to the
+[2022-09-02 18:37:28,870] {subprocess.py:92} INFO -                         target/ directory.
+[2022-09-02 18:37:28,874] {subprocess.py:92} INFO -     parse               Parses the project and provides information on
+[2022-09-02 18:37:28,886] {subprocess.py:92} INFO -                         performance
+[2022-09-02 18:37:28,888] {subprocess.py:92} INFO -     test                Runs tests on data in deployed models. Run this after
+[2022-09-02 18:37:28,894] {subprocess.py:92} INFO -                         `dbt run`
+[2022-09-02 18:37:28,898] {subprocess.py:92} INFO -     seed                Load data from csv files into your data warehouse.
+[2022-09-02 18:37:28,905] {subprocess.py:92} INFO -     run-operation       Run the named macro with any supplied arguments.
+[2022-09-02 18:37:28,910] {subprocess.py:92} INFO - 
+[2022-09-02 18:37:28,912] {subprocess.py:92} INFO - Specify one of these sub-commands and you can find more help from there.
+[2022-09-02 18:37:28,928] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-02 18:37:29,021] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=1_test_configuration, task_id=test_configuration, execution_date=20220902T183656, start_date=20220902T183703, end_date=20220902T183729
+[2022-09-02 18:37:29,127] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-02 18:37:29,213] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
