@@ -1,0 +1,168 @@
+[2022-08-31 17:36:37,658] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-08-31 17:36:37,686] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-08-31 17:36:37,689] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-31 17:36:37,691] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-31 17:36:37,693] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-31 17:36:37,725] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): daily_analysis> on 2020-08-01 00:00:00+00:00
+[2022-08-31 17:36:37,735] {standard_task_runner.py:52} INFO - Started process 409 to run task
+[2022-08-31 17:36:37,745] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', '2_daily_transformation_analysis', 'daily_analysis', 'scheduled__2020-08-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/transform_and_analysis.py', '--cfg-path', '/tmp/tmpdnon0vep', '--error-file', '/tmp/tmpo5v4nxz8']
+[2022-08-31 17:36:37,748] {standard_task_runner.py:80} INFO - Job 6: Subtask daily_analysis
+[2022-08-31 17:36:37,926] {task_command.py:371} INFO - Running <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [running]> on host 4a8ffecbc2e6
+[2022-08-31 17:36:38,274] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=2_daily_transformation_analysis
+AIRFLOW_CTX_TASK_ID=daily_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2020-08-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-08-01T00:00:00+00:00
+[2022-08-31 17:36:38,279] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-08-31 17:36:38,281] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /dbt && dbt run --models analysis --profiles-dir .']
+[2022-08-31 17:36:38,305] {subprocess.py:85} INFO - Output:
+[2022-08-31 17:36:52,108] {subprocess.py:92} INFO - [0m17:36:52  Running with dbt=1.2.1
+[2022-08-31 17:36:52,718] {subprocess.py:92} INFO - [0m17:36:52  Found 5 models, 0 tests, 0 snapshots, 0 analyses, 506 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics
+[2022-08-31 17:36:52,727] {subprocess.py:92} INFO - [0m17:36:52
+[2022-08-31 17:37:00,412] {subprocess.py:92} INFO - [0m17:37:00  Concurrency: 1 threads (target='dev')
+[2022-08-31 17:37:00,433] {subprocess.py:92} INFO - [0m17:37:00
+[2022-08-31 17:37:00,498] {subprocess.py:92} INFO - [0m17:37:00  1 of 2 START view model analysis.hotel_count_by_day ............................ [RUN]
+[2022-08-31 17:37:02,941] {subprocess.py:92} INFO - [0m17:37:02  1 of 2 OK created view model analysis.hotel_count_by_day ....................... [[32mSUCCESS 1[0m in 2.42s]
+[2022-08-31 17:37:02,971] {subprocess.py:92} INFO - [0m17:37:02  2 of 2 START view model analysis.thirty_day_avg_cost ........................... [RUN]
+[2022-08-31 17:37:05,083] {subprocess.py:92} INFO - [0m17:37:05  2 of 2 OK created view model analysis.thirty_day_avg_cost ...................... [[32mSUCCESS 1[0m in 2.10s]
+[2022-08-31 17:37:05,217] {subprocess.py:92} INFO - [0m17:37:05
+[2022-08-31 17:37:05,229] {subprocess.py:92} INFO - [0m17:37:05  Finished running 2 view models in 0 hours 0 minutes and 12.48 seconds (12.48s).
+[2022-08-31 17:37:05,408] {subprocess.py:92} INFO - [0m17:37:05
+[2022-08-31 17:37:05,414] {subprocess.py:92} INFO - [0m17:37:05  [32mCompleted successfully[0m
+[2022-08-31 17:37:05,418] {subprocess.py:92} INFO - [0m17:37:05
+[2022-08-31 17:37:05,423] {subprocess.py:92} INFO - [0m17:37:05  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2022-08-31 17:37:06,289] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-08-31 17:37:06,351] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=2_daily_transformation_analysis, task_id=daily_analysis, execution_date=20200801T000000, start_date=20220831T173637, end_date=20220831T173706
+[2022-08-31 17:37:06,410] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-31 17:37:06,469] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-08-31 22:54:19,729] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-08-31 22:54:19,818] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-08-31 22:54:19,838] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-31 22:54:19,850] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-31 22:54:19,861] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-31 22:54:20,065] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): daily_analysis> on 2020-08-01 00:00:00+00:00
+[2022-08-31 22:54:20,105] {standard_task_runner.py:52} INFO - Started process 2511 to run task
+[2022-08-31 22:54:20,145] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', '2_daily_transformation_analysis', 'daily_analysis', 'scheduled__2020-08-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/transform_and_analysis.py', '--cfg-path', '/tmp/tmpizqwn5hq', '--error-file', '/tmp/tmphhl34ktj']
+[2022-08-31 22:54:20,154] {standard_task_runner.py:80} INFO - Job 6: Subtask daily_analysis
+[2022-08-31 22:54:20,658] {task_command.py:371} INFO - Running <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [running]> on host 1b3d1bb2039d
+[2022-08-31 22:54:21,302] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=2_daily_transformation_analysis
+AIRFLOW_CTX_TASK_ID=daily_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2020-08-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-08-01T00:00:00+00:00
+[2022-08-31 22:54:21,308] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-08-31 22:54:21,311] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /dbt && dbt run --models analysis --profiles-dir .']
+[2022-08-31 22:54:21,336] {subprocess.py:85} INFO - Output:
+[2022-08-31 22:54:29,911] {subprocess.py:92} INFO - [0m22:54:29  Running with dbt=1.2.1
+[2022-08-31 22:54:30,600] {subprocess.py:92} INFO - [0m22:54:30  Found 5 models, 0 tests, 0 snapshots, 0 analyses, 506 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics
+[2022-08-31 22:54:30,610] {subprocess.py:92} INFO - [0m22:54:30
+[2022-08-31 22:54:40,661] {subprocess.py:92} INFO - [0m22:54:40  Concurrency: 1 threads (target='dev')
+[2022-08-31 22:54:40,667] {subprocess.py:92} INFO - [0m22:54:40
+[2022-08-31 22:54:40,693] {subprocess.py:92} INFO - [0m22:54:40  1 of 2 START view model analysis.hotel_count_by_day ............................ [RUN]
+[2022-08-31 22:54:42,807] {subprocess.py:92} INFO - [0m22:54:42  1 of 2 OK created view model analysis.hotel_count_by_day ....................... [[32mSUCCESS 1[0m in 2.10s]
+[2022-08-31 22:54:42,823] {subprocess.py:92} INFO - [0m22:54:42  2 of 2 START view model analysis.thirty_day_avg_cost ........................... [RUN]
+[2022-08-31 22:54:44,689] {subprocess.py:92} INFO - [0m22:54:44  2 of 2 OK created view model analysis.thirty_day_avg_cost ...................... [[32mSUCCESS 1[0m in 1.86s]
+[2022-08-31 22:54:44,796] {subprocess.py:92} INFO - [0m22:54:44
+[2022-08-31 22:54:44,800] {subprocess.py:92} INFO - [0m22:54:44  Finished running 2 view models in 0 hours 0 minutes and 14.18 seconds (14.18s).
+[2022-08-31 22:54:44,946] {subprocess.py:92} INFO - [0m22:54:44
+[2022-08-31 22:54:44,951] {subprocess.py:92} INFO - [0m22:54:44  [32mCompleted successfully[0m
+[2022-08-31 22:54:44,956] {subprocess.py:92} INFO - [0m22:54:44
+[2022-08-31 22:54:44,961] {subprocess.py:92} INFO - [0m22:54:44  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2022-08-31 22:54:45,855] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-08-31 22:54:45,936] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=2_daily_transformation_analysis, task_id=daily_analysis, execution_date=20200801T000000, start_date=20220831T225419, end_date=20220831T225445
+[2022-08-31 22:54:46,017] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-31 22:54:46,078] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-09-02 18:15:27,087] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-09-02 18:15:27,117] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-09-02 18:15:27,120] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 18:15:27,122] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-09-02 18:15:27,124] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 18:15:27,174] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): daily_analysis> on 2020-08-01 00:00:00+00:00
+[2022-09-02 18:15:27,189] {standard_task_runner.py:52} INFO - Started process 408 to run task
+[2022-09-02 18:15:27,210] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', '2_daily_transformation_analysis', 'daily_analysis', 'scheduled__2020-08-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/transform_and_analysis.py', '--cfg-path', '/tmp/tmpr_uppn2j', '--error-file', '/tmp/tmpb8hoqcl3']
+[2022-09-02 18:15:27,221] {standard_task_runner.py:80} INFO - Job 5: Subtask daily_analysis
+[2022-09-02 18:15:27,467] {task_command.py:371} INFO - Running <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [running]> on host 26ff35fadbf5
+[2022-09-02 18:15:28,402] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=2_daily_transformation_analysis
+AIRFLOW_CTX_TASK_ID=daily_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2020-08-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-08-01T00:00:00+00:00
+[2022-09-02 18:15:28,412] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-02 18:15:28,423] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /dbt && dbt run --models analysis --profiles-dir .']
+[2022-09-02 18:15:28,542] {subprocess.py:85} INFO - Output:
+[2022-09-02 18:15:48,779] {subprocess.py:92} INFO - [0m18:15:48  Running with dbt=1.2.1
+[2022-09-02 18:15:51,547] {subprocess.py:92} INFO - [0m18:15:51  Found 5 models, 0 tests, 0 snapshots, 0 analyses, 506 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics
+[2022-09-02 18:15:51,573] {subprocess.py:92} INFO - [0m18:15:51
+[2022-09-02 18:15:59,954] {subprocess.py:92} INFO - [0m18:15:59  Concurrency: 1 threads (target='dev')
+[2022-09-02 18:15:59,962] {subprocess.py:92} INFO - [0m18:15:59
+[2022-09-02 18:16:00,006] {subprocess.py:92} INFO - [0m18:16:00  1 of 2 START view model analysis.hotel_count_by_day ............................ [RUN]
+[2022-09-02 18:16:03,150] {subprocess.py:92} INFO - [0m18:16:03  1 of 2 OK created view model analysis.hotel_count_by_day ....................... [[32mSUCCESS 1[0m in 3.13s]
+[2022-09-02 18:16:03,163] {subprocess.py:92} INFO - [0m18:16:03  2 of 2 START view model analysis.thirty_day_avg_cost ........................... [RUN]
+[2022-09-02 18:16:10,416] {subprocess.py:92} INFO - [0m18:16:10  2 of 2 OK created view model analysis.thirty_day_avg_cost ...................... [[32mSUCCESS 1[0m in 7.16s]
+[2022-09-02 18:16:10,580] {subprocess.py:92} INFO - [0m18:16:10
+[2022-09-02 18:16:10,631] {subprocess.py:92} INFO - [0m18:16:10  Finished running 2 view models in 0 hours 0 minutes and 18.96 seconds (18.96s).
+[2022-09-02 18:16:10,884] {subprocess.py:92} INFO - [0m18:16:10
+[2022-09-02 18:16:10,900] {subprocess.py:92} INFO - [0m18:16:10  [32mCompleted successfully[0m
+[2022-09-02 18:16:10,920] {subprocess.py:92} INFO - [0m18:16:10
+[2022-09-02 18:16:10,933] {subprocess.py:92} INFO - [0m18:16:10  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2022-09-02 18:16:13,469] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-02 18:16:13,676] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=2_daily_transformation_analysis, task_id=daily_analysis, execution_date=20200801T000000, start_date=20220902T181527, end_date=20220902T181613
+[2022-09-02 18:16:13,874] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-02 18:16:14,095] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-09-02 20:21:06,939] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-09-02 20:21:07,021] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2022-09-02 20:21:07,024] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 20:21:07,027] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-09-02 20:21:07,030] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 20:21:07,098] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): daily_analysis> on 2020-08-01 00:00:00+00:00
+[2022-09-02 20:21:07,115] {standard_task_runner.py:52} INFO - Started process 799 to run task
+[2022-09-02 20:21:07,134] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', '2_daily_transformation_analysis', 'daily_analysis', 'scheduled__2020-08-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/transform_and_analysis.py', '--cfg-path', '/tmp/tmpvwmx5jhg', '--error-file', '/tmp/tmpwfzud2cy']
+[2022-09-02 20:21:07,143] {standard_task_runner.py:80} INFO - Job 5: Subtask daily_analysis
+[2022-09-02 20:21:07,636] {task_command.py:371} INFO - Running <TaskInstance: 2_daily_transformation_analysis.daily_analysis scheduled__2020-08-01T00:00:00+00:00 [running]> on host 46684d13e18c
+[2022-09-02 20:21:08,223] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=2_daily_transformation_analysis
+AIRFLOW_CTX_TASK_ID=daily_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2020-08-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-08-01T00:00:00+00:00
+[2022-09-02 20:21:08,237] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-02 20:21:08,241] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /dbt && dbt run --models analysis --profiles-dir .']
+[2022-09-02 20:21:08,284] {subprocess.py:85} INFO - Output:
+[2022-09-02 20:22:02,521] {subprocess.py:92} INFO - [0m20:22:02  Running with dbt=1.2.1
+[2022-09-02 20:22:04,760] {subprocess.py:92} INFO - [0m20:22:04  Found 5 models, 0 tests, 0 snapshots, 0 analyses, 506 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics
+[2022-09-02 20:22:04,790] {subprocess.py:92} INFO - [0m20:22:04
+[2022-09-02 20:22:13,476] {subprocess.py:92} INFO - [0m20:22:13  Concurrency: 1 threads (target='dev')
+[2022-09-02 20:22:13,499] {subprocess.py:92} INFO - [0m20:22:13
+[2022-09-02 20:22:13,571] {subprocess.py:92} INFO - [0m20:22:13  1 of 2 START view model analysis.hotel_count_by_day ............................ [RUN]
+[2022-09-02 20:22:16,488] {subprocess.py:92} INFO - [0m20:22:16  1 of 2 OK created view model analysis.hotel_count_by_day ....................... [[32mSUCCESS 1[0m in 2.90s]
+[2022-09-02 20:22:16,514] {subprocess.py:92} INFO - [0m20:22:16  2 of 2 START view model analysis.thirty_day_avg_cost ........................... [RUN]
+[2022-09-02 20:22:19,371] {subprocess.py:92} INFO - [0m20:22:19  2 of 2 OK created view model analysis.thirty_day_avg_cost ...................... [[32mSUCCESS 1[0m in 2.84s]
+[2022-09-02 20:22:19,426] {subprocess.py:92} INFO - [0m20:22:19
+[2022-09-02 20:22:19,431] {subprocess.py:92} INFO - [0m20:22:19  Finished running 2 view models in 0 hours 0 minutes and 14.63 seconds (14.63s).
+[2022-09-02 20:22:19,514] {subprocess.py:92} INFO - [0m20:22:19
+[2022-09-02 20:22:19,519] {subprocess.py:92} INFO - [0m20:22:19  [32mCompleted successfully[0m
+[2022-09-02 20:22:19,524] {subprocess.py:92} INFO - [0m20:22:19
+[2022-09-02 20:22:19,529] {subprocess.py:92} INFO - [0m20:22:19  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2022-09-02 20:22:20,822] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-09-02 20:22:20,900] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=2_daily_transformation_analysis, task_id=daily_analysis, execution_date=20200801T000000, start_date=20220902T202106, end_date=20220902T202220
+[2022-09-02 20:22:20,981] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-02 20:22:21,033] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

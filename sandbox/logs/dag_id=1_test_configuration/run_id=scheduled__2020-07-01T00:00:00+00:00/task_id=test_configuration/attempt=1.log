@@ -1,0 +1,45 @@
+[2022-09-02 18:32:19,311] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 1_test_configuration.test_configuration scheduled__2020-07-01T00:00:00+00:00 [queued]>
+[2022-09-02 18:32:19,391] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: 1_test_configuration.test_configuration scheduled__2020-07-01T00:00:00+00:00 [queued]>
+[2022-09-02 18:32:19,396] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 18:32:19,409] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-09-02 18:32:19,411] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-02 18:32:19,629] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): test_configuration> on 2020-07-01 00:00:00+00:00
+[2022-09-02 18:32:19,649] {standard_task_runner.py:52} INFO - Started process 359 to run task
+[2022-09-02 18:32:19,687] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', '1_test_configuration', 'test_configuration', 'scheduled__2020-07-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/init.py', '--cfg-path', '/tmp/tmp5maaonal', '--error-file', '/tmp/tmps7u5dojk']
+[2022-09-02 18:32:19,819] {standard_task_runner.py:80} INFO - Job 3: Subtask test_configuration
+[2022-09-02 18:32:20,359] {task_command.py:371} INFO - Running <TaskInstance: 1_test_configuration.test_configuration scheduled__2020-07-01T00:00:00+00:00 [running]> on host 647443ba232d
+[2022-09-02 18:32:22,147] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=1_test_configuration
+AIRFLOW_CTX_TASK_ID=test_configuration
+AIRFLOW_CTX_EXECUTION_DATE=2020-07-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-07-01T00:00:00+00:00
+[2022-09-02 18:32:22,175] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-02 18:32:22,199] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /dbt && dbt version']
+[2022-09-02 18:32:22,405] {subprocess.py:85} INFO - Output:
+[2022-09-02 18:32:31,588] {subprocess.py:92} INFO - usage: dbt [-h] [--version] [-r RECORD_TIMING_INFO] [-d]
+[2022-09-02 18:32:31,590] {subprocess.py:92} INFO -            [--log-format {text,json,default}] [--no-write-json]
+[2022-09-02 18:32:31,592] {subprocess.py:92} INFO -            [--use-colors | --no-use-colors] [--printer-width PRINTER_WIDTH]
+[2022-09-02 18:32:31,595] {subprocess.py:92} INFO -            [--warn-error] [--no-version-check]
+[2022-09-02 18:32:31,596] {subprocess.py:92} INFO -            [--partial-parse | --no-partial-parse] [--use-experimental-parser]
+[2022-09-02 18:32:31,598] {subprocess.py:92} INFO -            [--no-static-parser] [--profiles-dir PROFILES_DIR]
+[2022-09-02 18:32:31,600] {subprocess.py:92} INFO -            [--no-anonymous-usage-stats] [-x]
+[2022-09-02 18:32:31,604] {subprocess.py:92} INFO -            [--event-buffer-size EVENT_BUFFER_SIZE] [-q] [--no-print]
+[2022-09-02 18:32:31,605] {subprocess.py:92} INFO -            [--cache-selected-only | --no-cache-selected-only]
+[2022-09-02 18:32:31,607] {subprocess.py:92} INFO -            {docs,source,init,clean,debug,deps,list,ls,build,snapshot,run,compile,parse,test,seed,run-operation}
+[2022-09-02 18:32:31,609] {subprocess.py:92} INFO -            ...
+[2022-09-02 18:32:31,610] {subprocess.py:92} INFO - dbt: error: invalid choice: 'version' (choose from 'docs', 'source', 'init', 'clean', 'debug', 'deps', 'list', 'ls', 'build', 'snapshot', 'run', 'compile', 'parse', 'test', 'seed', 'run-operation')
+[2022-09-02 18:32:31,821] {subprocess.py:96} INFO - Command exited with return code 2
+[2022-09-02 18:32:31,861] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-09-02 18:32:31,877] {taskinstance.py:1420} INFO - Marking task as FAILED. dag_id=1_test_configuration, task_id=test_configuration, execution_date=20200701T000000, start_date=20220902T183219, end_date=20220902T183231
+[2022-09-02 18:32:31,913] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task test_configuration (Bash command failed. The command returned a non-zero exit code 2.; 359)
+[2022-09-02 18:32:31,951] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-09-02 18:32:32,010] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
