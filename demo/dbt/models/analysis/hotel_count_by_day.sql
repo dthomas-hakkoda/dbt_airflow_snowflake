@@ -2,7 +2,7 @@ SELECT
   BOOKING_DATE,
   HOTEL,
   COUNT(ID) as count_bookings
-FROM {{ ref('prepped_data') }}
+FROM {{ ref('unified_data') }}
 GROUP BY
   BOOKING_DATE,
   HOTEL
